@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on </title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blogs on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Nov 2024 19:09:12 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CV</title>
+      <link>http://localhost:1313/blog/cv/</link>
+      <pubDate>Wed, 20 Nov 2024 19:09:12 -0800</pubDate>
+      <guid>http://localhost:1313/blog/cv/</guid>
+      <description>&lt;h1 id=&#34;pengjia-cui&#34;&gt;Pengjia Cui&lt;/h1&gt;&#xA;&lt;h2 id=&#34;contact-information&#34;&gt;Contact Information&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a href=&#34;mailto:pengjia.cui@outlook.com&#34;&gt;pengjia.cui@outlook.com&lt;/a&gt;, &lt;a href=&#34;mailto:pcui@ucsd.edu&#34;&gt;pcui@ucsd.edu&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&#34;https://github.com/Amethystium-321E1&#34;&gt;https://github.com/Amethystium-321E1&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Personal Website&lt;/strong&gt;: &lt;a href=&#34;https://Amethystium-321E1.github.io&#34;&gt;Amethystium-321E1.github.io&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mobile&lt;/strong&gt;: (858)-214-7963&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Address&lt;/strong&gt;: 3117, 3869 Miramar Street, La Jolla, CA 92037&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;&#xA;&lt;h3 id=&#34;communication-university-of-china-cuc&#34;&gt;Communication University of China (CUC)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sept. 2020 - Jul. 2024&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;School of Information and Communication Engineering, Beijing, China&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Major: Bachelor of Engineering in Artificial Intelligence&lt;/li&gt;&#xA;&lt;li&gt;Awards: Merit Graduate of Beijing, Merit Graduate of CUC, Scholarship of School of Information and Communication Engineering, Scholarship for Excellent Student Leader&lt;/li&gt;&#xA;&lt;li&gt;Area of Interests: Recommender Systems, Social Networks, Computational Communication and Propagation Dynamics, Information Retrieval and Data Mining&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;university-of-california-san-diego&#34;&gt;University of California San Diego&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Jul. 2024 - Jun. 2025 (Expected)&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;School of Social Sciences, La Jolla, CA&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
