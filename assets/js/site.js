@@ -203,7 +203,7 @@
     charMasks = $$('.char-mask', heroTitle);
     chars = $$('.char', heroTitle);
     const fontSize = parseFloat(getComputedStyle(heroTitle).fontSize) || 100;
-    maxLift = Math.min(10, fontSize * 0.09);
+    maxLift = Math.min(16, fontSize * 0.12);
     const titleRect = heroTitle.getBoundingClientRect();
     charOffsets = charMasks.map((mask) => {
       const rect = mask.getBoundingClientRect();
@@ -226,7 +226,7 @@
       const offset = charOffsets[index];
       if (!offset) return;
       const distance = Math.hypot(pointerX - offset.x, pointerY - offset.y);
-      const lift = distance < 230 ? (1 - distance / 230) * maxLift : 0;
+      const lift = distance < 280 ? (1 - distance / 280) * maxLift : 0;
       char.style.transform = lift > 0.1 ? `translateY(${-lift}px)` : '';
     });
   };
@@ -275,8 +275,8 @@
 
         portraitInner.style.setProperty('--mx', `${x}px`);
         portraitInner.style.setProperty('--my', `${y}px`);
-        portrait.style.setProperty('--ry', `${((event.clientX - rect.left) / rect.width - 0.5) * 4.5}deg`);
-        portrait.style.setProperty('--rx', `${((event.clientY - rect.top) / rect.height - 0.5) * -4.5}deg`);
+        portrait.style.setProperty('--ry', `${((event.clientX - rect.left) / rect.width - 0.5) * 7}deg`);
+        portrait.style.setProperty('--rx', `${((event.clientY - rect.top) / rect.height - 0.5) * -7}deg`);
       },
       { passive: true }
     );
@@ -300,8 +300,8 @@
           const rect = element.getBoundingClientRect();
           const x = event.clientX - rect.left - rect.width / 2;
           const y = event.clientY - rect.top - rect.height / 2;
-          element.style.setProperty('--tx', `${Math.max(-10, Math.min(10, x * 0.12))}px`);
-          element.style.setProperty('--ty', `${Math.max(-8, Math.min(8, y * 0.18))}px`);
+          element.style.setProperty('--tx', `${Math.max(-16, Math.min(16, x * 0.18))}px`);
+          element.style.setProperty('--ty', `${Math.max(-12, Math.min(12, y * 0.22))}px`);
         },
         { passive: true }
       );
@@ -344,12 +344,12 @@
     window.addEventListener('pointerup', () => cursor.classList.remove('is-down'));
 
     const drawCursor = () => {
-      ringX += (mouseX - ringX) * 0.18;
-      ringY += (mouseY - ringY) * 0.18;
+      ringX += (mouseX - ringX) * 0.14;
+      ringY += (mouseY - ringY) * 0.14;
 
       ring.style.translate = `${ringX}px ${ringY}px`;
       core.style.translate = `${mouseX}px ${mouseY}px`;
-      label.style.translate = `${ringX + 22}px ${ringY + 22}px`;
+      label.style.translate = `${ringX + 24}px ${ringY + 24}px`;
 
       requestAnimationFrame(drawCursor);
     };
@@ -581,38 +581,71 @@
       this.canvas.style.height = `${this.height}px`;
       this.context.setTransform(dpr, 0, 0, dpr, 0, 0);
 
+      const golden = Math.PI * (3 - Math.sqrt(5));
+      const scatter = this.reduced ? 0 : 1;
+      const centerX = this.width * (this.width > 900 ? 0.58 : 0.5);
+      const centerY = this.height * (this.width > 900 ? 0.48 : 0.5);
+      const radiusX = this.width * (this.width > 900 ? 0.36 : 0.44);
+      const radiusY = this.height * (this.width > 900 ? 0.36 : 0.4);
+
+      this.homeCenterX = centerX;
+      this.homeCenterY = centerY;
+
       const count = Math.round(
         Math.min(120, Math.max(34, (this.width * this.height) / 15000))
       );
 
-      this.nodes = Array.from({ length: count }, () => ({
-        x: Math.random() * this.width,
-        y: Math.random() * this.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        r: Math.random() * 1.05 + 0.9,
-        hub: Math.random() < 0.18,
-        phase: Math.random() * Math.PI * 2,
-        twinkle: 0.55 + Math.random() * 1.6,
-      }));
+      this.nodes = Array.from({ length: count }, (_, index) => {
+        const t = Math.sqrt((index + 0.5) / count);
+        const angle = index * golden;
+        const jitter = 0.94 + Math.random() * 0.12;
+        const hx = centerX + Math.cos(angle) * radiusX * t * jitter;
+        const hy = centerY + Math.sin(angle) * radiusY * t * jitter;
+
+        return {
+          x: scatter ? Math.random() * this.width : hx,
+          y: scatter ? Math.random() * this.height : hy,
+          hx,
+          hy,
+          vx: (Math.random() - 0.5) * 0.45 * scatter,
+          vy: (Math.random() - 0.5) * 0.45 * scatter,
+          r: Math.random() * 1.05 + 0.9,
+          hub: Math.random() < 0.18,
+          phase: Math.random() * Math.PI * 2,
+          twinkle: 0.55 + Math.random() * 1.6,
+        };
+      });
 
       const dustCount = Math.round(
         Math.min(180, Math.max(44, count * 1.35))
       );
 
-      this.dust = Array.from({ length: dustCount }, () => ({
-        x: Math.random() * this.width,
-        y: Math.random() * this.height,
-        vx: (Math.random() - 0.5) * 0.12,
-        vy: (Math.random() - 0.5) * 0.12,
-        r: Math.random() * 0.85 + 0.3,
-        phase: Math.random() * Math.PI * 2,
-        speed: 0.35 + Math.random() * 0.65,
-        alpha: 0.16 + Math.random() * 0.24,
-      }));
+      this.dust = Array.from({ length: dustCount }, (_, index) => {
+        const t = Math.sqrt((index + 0.5) / dustCount);
+        const angle = index * golden + 0.9;
+        const jitter = 0.92 + Math.random() * 0.16;
+        const hx = centerX + Math.cos(angle) * radiusX * 0.8 * t * jitter;
+        const hy = centerY + Math.sin(angle) * radiusY * 0.8 * t * jitter;
+
+        return {
+          x: scatter ? Math.random() * this.width : hx,
+          y: scatter ? Math.random() * this.height : hy,
+          hx,
+          hy,
+          vx: (Math.random() - 0.5) * 0.16 * scatter,
+          vy: (Math.random() - 0.5) * 0.16 * scatter,
+          r: Math.random() * 0.85 + 0.3,
+          phase: Math.random() * Math.PI * 2,
+          speed: 0.35 + Math.random() * 0.65,
+          alpha: 0.16 + Math.random() * 0.24,
+        };
+      });
 
       this.ripples = [];
       this.sparks = [];
+      this.homeScale = 1;
+      this.homeScaleUntil = 0;
+      this.nextPulseAt = performance.now() / 1000 + 7 + Math.random() * 2;
 
       if (this.reduced) this.drawStatic();
     }
@@ -665,11 +698,11 @@
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
 
-        this.ripples.push({ x, y, radius: 0, alpha: 0.55 });
+        this.ripples.push({ x, y, radius: 0, alpha: 0.65 });
 
-        for (let i = 0; i < 18; i += 1) {
+        for (let i = 0; i < 26; i += 1) {
           const angle = Math.random() * Math.PI * 2;
-          const speed = 0.7 + Math.random() * 2.8;
+          const speed = 0.7 + Math.random() * 3.2;
           this.sparks.push({
             x,
             y,
@@ -677,7 +710,7 @@
             vy: Math.sin(angle) * speed,
             life: 1,
             decay: 0.014 + Math.random() * 0.018,
-            r: 0.5 + Math.random() * 1.5,
+            r: 0.5 + Math.random() * 1.7,
           });
         }
 
@@ -685,10 +718,21 @@
           const dx = node.x - x;
           const dy = node.y - y;
           const distance = Math.hypot(dx, dy);
-          if (distance < 240 && distance > 0.1) {
-            const force = (1 - distance / 240) * 2.2;
-            node.vx += (dx / distance) * force;
-            node.vy += (dy / distance) * force;
+          if (distance < 320 && distance > 0.1) {
+            const force = (1 - distance / 320) * 3.2;
+            node.vx += (dx / distance) * force + (-dy / distance) * force * 0.22;
+            node.vy += (dy / distance) * force + (dx / distance) * force * 0.22;
+          }
+        });
+
+        this.dust.forEach((particle) => {
+          const dx = particle.x - x;
+          const dy = particle.y - y;
+          const distance = Math.hypot(dx, dy);
+          if (distance < 260 && distance > 0.1) {
+            const force = (1 - distance / 260) * 0.7;
+            particle.vx += (dx / distance) * force;
+            particle.vy += (dy / distance) * force;
           }
         });
       });
@@ -730,6 +774,33 @@
       this.frame = 0;
     }
 
+    pulseFromCenter(strength) {
+      const centerX = this.homeCenterX;
+      const centerY = this.homeCenterY;
+      const now = performance.now() / 1000;
+
+      this.homeScale = 1.55;
+      this.homeScaleUntil = now + 1.8;
+
+      this.nodes.forEach((node) => {
+        const dx = node.x - centerX;
+        const dy = node.y - centerY;
+        const distance = Math.hypot(dx, dy) || 1;
+        const force = strength * 0.5 * (0.6 + Math.random() * 0.7);
+        node.vx += (dx / distance) * force;
+        node.vy += (dy / distance) * force;
+      });
+
+      this.dust.forEach((particle) => {
+        const dx = particle.x - centerX;
+        const dy = particle.y - centerY;
+        const distance = Math.hypot(dx, dy) || 1;
+        const force = strength * 0.25 * (0.6 + Math.random() * 0.7);
+        particle.vx += (dx / distance) * force;
+        particle.vy += (dy / distance) * force;
+      });
+    }
+
     step() {
       const context = this.context;
       const nodes = this.nodes;
@@ -739,14 +810,45 @@
       context.clearRect(0, 0, this.width, this.height);
       context.globalCompositeOperation = this.night ? 'lighter' : 'source-over';
 
+      if (time >= this.nextPulseAt) {
+        this.nextPulseAt = time + 12 + Math.random() * 4;
+        this.pulseFromCenter(1.4);
+        this.ripples.push({
+          x: this.homeCenterX,
+          y: this.homeCenterY,
+          radius: 0,
+          alpha: 0.16,
+        });
+      }
+
+      if (this.homeScale > 1 && time > this.homeScaleUntil) {
+        this.homeScale = 1;
+      }
+
       this.dust.forEach((particle) => {
+        if (pointer.active) {
+          const dx = particle.x - pointer.x;
+          const dy = particle.y - pointer.y;
+          const distance = Math.hypot(dx, dy) || 1;
+          if (distance < 180) {
+            const force = (1 - distance / 180) * 0.16;
+            particle.vx += (dx / distance) * force;
+            particle.vy += (dy / distance) * force;
+          }
+        }
+
+        const targetX = this.homeCenterX + (particle.hx - this.homeCenterX) * this.homeScale;
+        const targetY = this.homeCenterY + (particle.hy - this.homeCenterY) * this.homeScale;
+        particle.vx += (targetX - particle.x) * 0.0035;
+        particle.vy += (targetY - particle.y) * 0.0035;
+        particle.vx *= 0.986;
+        particle.vy *= 0.986;
         particle.x += particle.vx;
         particle.y += particle.vy;
-
-        if (particle.x < -10) particle.x = this.width + 10;
-        else if (particle.x > this.width + 10) particle.x = -10;
-        if (particle.y < -10) particle.y = this.height + 10;
-        else if (particle.y > this.height + 10) particle.y = -10;
+        if (particle.x < -40) particle.x = -40;
+        else if (particle.x > this.width + 40) particle.x = this.width + 40;
+        if (particle.y < -40) particle.y = -40;
+        else if (particle.y > this.height + 40) particle.y = this.height + 40;
 
         const twinkle = 0.55 + 0.45 * Math.sin(time * particle.speed + particle.phase);
         context.beginPath();
@@ -760,29 +862,38 @@
           const dx = node.x - pointer.x;
           const dy = node.y - pointer.y;
           const distance = Math.hypot(dx, dy) || 1;
-          if (distance < 160) {
-            const force = (1 - distance / 160) * 0.22;
+          if (distance < 240) {
+            const force = (1 - distance / 240) * 0.55;
             node.vx += (dx / distance) * force;
             node.vy += (dy / distance) * force;
+            node.vx += (-dy / distance) * force * 0.35;
+            node.vy += (dx / distance) * force * 0.35;
           }
         }
 
-        node.vx *= 0.988;
-        node.vy *= 0.988;
+        const homeX = this.homeCenterX + (node.hx - this.homeCenterX) * this.homeScale;
+        const homeY = this.homeCenterY + (node.hy - this.homeCenterY) * this.homeScale;
+        node.vx += (homeX - node.x) * 0.0045;
+        node.vy += (homeY - node.y) * 0.0045;
+        node.vx += Math.cos(time * 0.6 + node.phase) * 0.004;
+        node.vy += Math.sin(time * 0.5 + node.phase) * 0.004;
+
+        node.vx *= 0.982;
+        node.vy *= 0.982;
 
         const speed = Math.hypot(node.vx, node.vy);
-        if (speed > 0.9) {
-          node.vx = (node.vx / speed) * 0.9;
-          node.vy = (node.vy / speed) * 0.9;
+        if (speed > 2.6) {
+          node.vx = (node.vx / speed) * 2.6;
+          node.vy = (node.vy / speed) * 2.6;
         }
 
         node.x += node.vx;
         node.y += node.vy;
 
-        if (node.x < -30) node.x = this.width + 30;
-        else if (node.x > this.width + 30) node.x = -30;
-        if (node.y < -30) node.y = this.height + 30;
-        else if (node.y > this.height + 30) node.y = -30;
+        if (node.x < -80) node.x = -80;
+        else if (node.x > this.width + 80) node.x = this.width + 80;
+        if (node.y < -80) node.y = -80;
+        else if (node.y > this.height + 80) node.y = this.height + 80;
       });
 
       const maxDistance = 150;
@@ -828,7 +939,7 @@
         nodes.forEach((node) => {
           const dx = node.x - pointer.x;
           const dy = node.y - pointer.y;
-          if (Math.hypot(dx, dy) < 190) {
+          if (Math.hypot(dx, dy) < 240) {
             context.moveTo(pointer.x, pointer.y);
             context.lineTo(node.x, node.y);
             linked += 1;
@@ -836,8 +947,8 @@
         });
 
         if (linked) {
-          context.strokeStyle = `rgba(${this.node}, ${this.night ? 0.46 : 0.3})`;
-          context.lineWidth = 0.8;
+          context.strokeStyle = `rgba(${this.node}, ${this.night ? 0.55 : 0.36})`;
+          context.lineWidth = 1;
           context.stroke();
         }
 
@@ -845,12 +956,12 @@
         nodes.forEach((node) => {
           const dx = node.x - pointer.x;
           const dy = node.y - pointer.y;
-          if (Math.hypot(dx, dy) < 190) {
-            context.moveTo(node.x + node.r * 3.2, node.y);
-            context.arc(node.x, node.y, node.r * 3.2, 0, Math.PI * 2);
+          if (Math.hypot(dx, dy) < 240) {
+            context.moveTo(node.x + node.r * 3.8, node.y);
+            context.arc(node.x, node.y, node.r * 3.8, 0, Math.PI * 2);
           }
         });
-        context.fillStyle = `rgba(${this.node}, ${this.night ? 0.1 : 0.055})`;
+        context.fillStyle = `rgba(${this.node}, ${this.night ? 0.15 : 0.09})`;
         context.fill();
       }
 

@@ -358,9 +358,9 @@ html.menu-open .cursor {
 }
 
 .cursor.is-hover .cursor__ring {
-  width: 62px;
-  height: 62px;
-  margin: -31px 0 0 -31px;
+  width: 70px;
+  height: 70px;
+  margin: -35px 0 0 -35px;
   background: var(--cursor-hover-bg);
   border-color: var(--accent);
 }
@@ -775,8 +775,8 @@ html.menu-open .cursor {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  padding: 0.11em 0 0.08em;
-  margin: -0.11em 0 -0.08em;
+  padding: 0.13em 0 0.08em;
+  margin: -0.13em 0 -0.08em;
 }
 
 .char {
@@ -942,6 +942,7 @@ html.menu-open .cursor {
 }
 
 .portrait:hover .portrait__frame {
+  transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry)) scale(1.012);
   box-shadow: 0 50px 130px rgba(23, 19, 31, 0.24);
 }
 
@@ -984,13 +985,13 @@ html.menu-open .cursor {
   opacity: 0;
   filter: saturate(1.45) contrast(1.04) brightness(1.05);
   -webkit-mask-image: radial-gradient(
-    circle 160px at var(--mx) var(--my),
+    circle 190px at var(--mx) var(--my),
     #000 0%,
     rgba(0, 0, 0, 0.86) 45%,
     transparent 72%
   );
   mask-image: radial-gradient(
-    circle 160px at var(--mx) var(--my),
+    circle 190px at var(--mx) var(--my),
     #000 0%,
     rgba(0, 0, 0, 0.86) 45%,
     transparent 72%
@@ -1445,8 +1446,8 @@ html.menu-open .cursor {
   inset: 0;
   z-index: 0;
   background: radial-gradient(
-    420px circle at var(--mx, 50%) var(--my, 50%),
-    color-mix(in srgb, var(--accent) 12%, transparent),
+    520px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in srgb, var(--accent) 16%, transparent),
     transparent 66%
   );
   opacity: 0;
