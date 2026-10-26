@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /post/
+Disallow: /categories/
+Disallow: /tags/
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+Disallow: /plugins/
+Disallow: /images/
+Disallow: /img/
+
+Sitemap: https://amethystium-321e1.github.io/sitemap.xml

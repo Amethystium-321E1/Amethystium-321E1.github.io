@@ -1,650 +1,594 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" data-theme="night">
 <head>
-	<meta name="generator" content="Hugo 0.137.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amethystium — Hari Tswei (Pengjia Cui)</title>
+  <meta name="description" content="Amethystium is the personal site of Hari Tswei (Pengjia Cui), a computational social scientist working on networks, communication, knowledge, and measurement.">
+  <meta name="author" content="Hari Tswei (Pengjia Cui)">
+  <meta name="theme-color" content="#0b0713">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://amethystium-321e1.github.io/">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/bodoni-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/newsreader-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
 
-    <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-<meta name="theme-color" content="#478079" >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amethystium — Hari Tswei (Pengjia Cui)">
+  <meta property="og:description" content="Computational social science · networks · communication · knowledge · measurement.">
+  <meta property="og:url" content="https://amethystium-321e1.github.io/">
+  <meta property="og:image" content="https://amethystium-321e1.github.io/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amethystium — Hari Tswei">
+  <meta name="twitter:description" content="Computational social science · networks · communication · knowledge · measurement.">
+  <meta name="twitter:image" content="https://amethystium-321e1.github.io/assets/img/og-cover.jpg">
 
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('amethystium-theme-v2');
+        const theme = stored === 'day' ? 'day' : 'night';
+        document.documentElement.dataset.theme = theme;
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', theme === 'night' ? '#0b0713' : '#f0eee7');
+      } catch (_) {
+        document.documentElement.dataset.theme = 'night';
+      }
+    })();
+  </script>
 
-
-<title>Amethystium | Pengjia Cui</title>
-<meta name="description" content="This is the personal website of Pengjia Cui based on Hugo. ">
-
-
-<style data-generator="critical-css">
-
-</style>
-
-
-
-    
-        
-        
-    
-
-    
-        
-        
-    
-
-    
-        
-        
-    
-
-
-
-
-
- 
-
-
-<link
-  rel="preload"
-  href="/css/bundle.css"
-  as="style"
-  data-generator="purgeCSS"
-  onload="this.onload=null;this.rel='stylesheet'"
-  
-/>
-<noscript>
-  <link 
-    rel="stylesheet" 
-    href="/css/bundle.css"
-    
-  />
-</noscript>
-
-
-
-<script src='http://localhost:1313/js/library/lozad.min.js'></script>
-
-
-
-    
-
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hari Tswei",
+    "alternateName": ["Pengjia Cui", "Amethystium", "崔鹏嘉"],
+    "url": "https://amethystium-321e1.github.io/",
+    "email": "mailto:pcui@ucsd.edu",
+    "jobTitle": "Computational social scientist",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of California San Diego"
+    },
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "University of California San Diego"},
+      {"@type": "CollegeOrUniversity", "name": "Communication University of China"}
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/pengjia-cui-7b4108322/",
+      "https://github.com/Amethystium-321E1",
+      "https://orcid.org/0009-0004-6360-8897"
+    ],
+    "knowsAbout": [
+      "social networks",
+      "citation networks",
+      "computational communication",
+      "bibliometrics",
+      "knowledge organization",
+      "measurement and reproducibility",
+      "recommender systems"
+    ]
+  }
+  </script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor__ring"></span>
+    <span class="cursor__core"></span>
+    <span class="cursor__label"></span>
+  </div>
 
-<body class="home">
+  <header class="site-header" id="top">
+    <div class="wrap header__inner">
+      <a class="brand" href="#top" aria-label="Amethystium — home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <ellipse cx="16" cy="17" rx="13" ry="6" transform="rotate(-20 16 17)" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/>
+          <path d="M16 4 L23 12 L20 26 L12 26 L9 12 Z" fill="var(--accent)" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M16 4 L16 26 M9 12 L23 12 M12 26 L19 12 L20 26" fill="none" stroke="currentColor" stroke-width=".75" opacity=".8"/>
+        </svg>
+        <span class="brand__name">Amethystium</span>
+        <span class="brand__code">U+321E1</span>
+      </a>
 
-	
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<header class="header fixed-top rad-animation-group" id="header">
-  <div class="container rad-fade-in">
-    <nav class="navbar navbar-expand-lg navbar-light p-0">
-      <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="http://localhost:1313/">
-          <span>PENGJIA</span>
-          <span>CUI</span>
-        </a>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent, #header"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+      <div class="header__tools">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to day mode">
+          <svg class="icon icon--sun" viewBox="0 0 20 20" aria-hidden="true">
+            <circle cx="10" cy="10" r="3.4" fill="none" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M10 1.6v2.1M10 16.3v2.1M1.6 10h2.1M16.3 10h2.1M3.9 3.9l1.5 1.5M14.6 14.6l1.5 1.5M16.1 3.9l-1.5 1.5M5.4 14.6l-1.5 1.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon--moon" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M15.9 12.4A6.4 6.4 0 0 1 7.6 4.1 6.4 6.4 0 1 0 15.9 12.4Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+            <path d="M15.3 3.2l.4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4.4-1.2Z" fill="currentColor" opacity=".8"/>
+          </svg>
+          <span class="theme-toggle__text">Day</span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-lg-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="http://localhost:1313/">HOME</a>
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#about"
-                >ABOUT</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#portfolio"
-                >PORTFOLIO</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/blog"
-                >BLOG</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#contact"
-                >CONTACT</a
-              >
-            </li>
-            
+        <button class="menu-toggle" type="button" aria-haspopup="dialog" aria-controls="menu-dialog">
+          <span>Menu</span>
+          <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 1h16M1 6h16M1 11h16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <dialog class="menu-dialog" id="menu-dialog" aria-label="Site menu">
+    <div class="menu-dialog__top">
+      <div class="brand brand--dialog">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <ellipse cx="16" cy="17" rx="13" ry="6" transform="rotate(-20 16 17)" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/>
+          <path d="M16 4 L23 12 L20 26 L12 26 L9 12 Z" fill="var(--accent)" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M16 4 L16 26 M9 12 L23 12 M12 26 L19 12 L20 26" fill="none" stroke="currentColor" stroke-width=".75" opacity=".8"/>
+        </svg>
+        <span class="brand__name">Amethystium</span>
+      </div>
+      <button class="menu-dialog__close" type="button" aria-label="Close menu">
+        <span>Close</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2l12 12M14 2L2 14" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="menu-dialog__nav" aria-label="Mobile primary">
+      <a href="#about"><span>I</span> About</a>
+      <a href="#research"><span>II</span> Research</a>
+      <a href="#publications"><span>III</span> Publications</a>
+      <a href="#experience"><span>IV</span> Experience</a>
+      <a href="#education"><span>V</span> Education</a>
+      <a href="#contact"><span>VI</span> Contact</a>
+    </nav>
+    <div class="menu-dialog__foot">
+      <button class="theme-toggle theme-toggle--dialog" type="button" data-theme-toggle aria-label="Switch to day mode">
+        <svg class="icon icon--sun" viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="3.4" fill="none" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M10 1.6v2.1M10 16.3v2.1M1.6 10h2.1M16.3 10h2.1M3.9 3.9l1.5 1.5M14.6 14.6l1.5 1.5M16.1 3.9l-1.5 1.5M5.4 14.6l-1.5 1.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon icon--moon" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M15.9 12.4A6.4 6.4 0 0 1 7.6 4.1 6.4 6.4 0 1 0 15.9 12.4Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M15.3 3.2l.4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4.4-1.2Z" fill="currentColor" opacity=".8"/>
+        </svg>
+        <span class="theme-toggle__text">Day</span>
+      </button>
+      <a href="mailto:pcui@ucsd.edu" class="menu-dialog__mail">pcui@ucsd.edu</a>
+    </div>
+  </dialog>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="hero__context">Computational social science · UC San Diego</p>
+          <h1 class="hero__title" id="hero-title" aria-label="Amethystium">
+            <span class="char-mask" style="--i:0"><span class="char" aria-hidden="true">A</span></span><span class="char-mask" style="--i:1"><span class="char" aria-hidden="true">M</span></span><span class="char-mask" style="--i:2"><span class="char" aria-hidden="true">E</span></span><span class="char-mask" style="--i:3"><span class="char" aria-hidden="true">T</span></span><span class="char-mask" style="--i:4"><span class="char" aria-hidden="true">H</span></span><span class="char-mask" style="--i:5"><span class="char" aria-hidden="true">Y</span></span><span class="char-mask" style="--i:6"><span class="char" aria-hidden="true">S</span></span><span class="char-mask" style="--i:7"><span class="char" aria-hidden="true">T</span></span><span class="char-mask" style="--i:8"><span class="char" aria-hidden="true">I</span></span><span class="char-mask" style="--i:9"><span class="char" aria-hidden="true">U</span></span><span class="char-mask" style="--i:10"><span class="char" aria-hidden="true">M</span></span>
+          </h1>
+          <p class="hero__names"><span>Hari Tswei</span><span class="hero__dot" aria-hidden="true">·</span><span class="hero__soft">Pengjia Cui</span><span class="hero__dot" aria-hidden="true">·</span><span class="cjk" lang="zh-Hans">崔鹏嘉</span></p>
+          <p class="hero__statement">I study how networks shape knowledge, attention, and public life — and how measurement choices shape what we can see.</p>
+          <p class="hero__status"><span class="status-dot" aria-hidden="true"></span>Open to PhD opportunities in network science and computational communication</p>
+          <div class="hero__actions">
+            <a class="link-cta" href="#research" data-cursor-label="Read">
+              <span>Explore the research</span>
+              <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="link-cta" href="mailto:pcui@ucsd.edu" data-cursor-label="Email">
+              <span>Write to me</span>
+              <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__logo" aria-hidden="true"></div>
+          <figure class="portrait" data-cursor-label="Look">
+            <div class="portrait__frame">
+              <svg class="portrait__orbit" viewBox="0 0 600 720" aria-hidden="true">
+                <ellipse class="orbit orbit--one" cx="300" cy="360" rx="286" ry="330" transform="rotate(-18 300 360)" pathLength="1"/>
+                <ellipse class="orbit orbit--two" cx="300" cy="360" rx="258" ry="344" transform="rotate(27 300 360)" pathLength="1"/>
+                <g class="orbit__dot orbit__dot--one"><circle cx="300" cy="30" r="4.5"/></g>
+                <g class="orbit__dot orbit__dot--two"><circle cx="558" cy="390" r="3"/></g>
+              </svg>
+              <div class="portrait__inner">
+                <img class="portrait__img portrait__img--mono" src="/assets/img/portrait-1200.webp" srcset="/assets/img/portrait-800.webp 800w, /assets/img/portrait-1200.webp 1200w, /assets/img/portrait-1600.webp 1600w" sizes="(max-width: 900px) 78vw, 38vw" width="1200" height="1600" alt="Hari Tswei standing beside concrete columns at UC San Diego." fetchpriority="high" decoding="async">
+                <img class="portrait__img portrait__img--color" src="/assets/img/portrait-1200.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <span class="portrait__vignette" aria-hidden="true"></span>
+              </div>
+            </div>
+            <figcaption class="portrait__caption"><span class="portrait__dot" aria-hidden="true"></span>La Jolla, California · 2024</figcaption>
+          </figure>
+        </div>
+
+        <div class="hero__foot">
+          <span class="hero__scroll"><span class="scroll-line" aria-hidden="true"></span>Scroll to enter the index</span>
+          <span class="hero__coordinates">32.8801° N / 117.2340° W</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span>Social networks</span><span class="ticker__star">✦</span>
+          <span>Citation networks</span><span class="ticker__star">✦</span>
+          <span>Computational communication</span><span class="ticker__star">✦</span>
+          <span>Knowledge organization</span><span class="ticker__star">✦</span>
+          <span>Measurement &amp; reproducibility</span><span class="ticker__star">✦</span>
+          <span>Recommender systems</span><span class="ticker__star">✦</span>
+          <span>Digital platforms</span><span class="ticker__star">✦</span>
+          <span>Scientific recognition</span><span class="ticker__star">✦</span>
+        </div>
+        <div class="ticker__group">
+          <span>Social networks</span><span class="ticker__star">✦</span>
+          <span>Citation networks</span><span class="ticker__star">✦</span>
+          <span>Computational communication</span><span class="ticker__star">✦</span>
+          <span>Knowledge organization</span><span class="ticker__star">✦</span>
+          <span>Measurement &amp; reproducibility</span><span class="ticker__star">✦</span>
+          <span>Recommender systems</span><span class="ticker__star">✦</span>
+          <span>Digital platforms</span><span class="ticker__star">✦</span>
+          <span>Scientific recognition</span><span class="ticker__star">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section__head" data-reveal="head">
+          <span class="section__index">I</span>
+          <h2 class="section__title" id="about-title">About</h2>
+          <p class="section__note">The person behind the mark</p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__media" data-reveal="fade">
+            <figure class="about__figure">
+              <img src="/assets/img/leaves-1600.webp" srcset="/assets/img/leaves-900.webp 900w, /assets/img/leaves-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 48vw" width="1600" height="1067" alt="Hari Tswei sitting among autumn leaves at UC San Diego." loading="lazy" decoding="async">
+              <figcaption>UC San Diego · autumn 2024</figcaption>
+            </figure>
+            <div class="about__seal" aria-hidden="true">
+              <img src="/assets/img/logo-print.webp" width="775" height="900" alt="" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="about__copy">
+            <p class="about__lede" data-reveal="fade">Amethystium is the personal mark of Hari Tswei (Pengjia Cui), a computational social scientist trained in artificial intelligence.</p>
+            <p data-reveal="fade" style="--delay:60ms">My work sits where network science, communication research, and the study of science meet. I map citation and social networks, trace how platforms frame public discourse and scientific recognition, and audit the measurement choices behind claims made from digital traces.</p>
+            <p data-reveal="fade" style="--delay:110ms">I care about reproducible pipelines, visible provenance, and the difference between a pattern and an explanation. My training includes graduate studies in Computational Social Science at UC San Diego and a B.Eng. in Artificial Intelligence from the Communication University of China. I have worked with research teams at City University of Hong Kong and CUHK-Shenzhen, and in research administration at the Institute of Physics, Chinese Academy of Sciences.</p>
+
+            <blockquote class="pullquote" data-reveal="fade" style="--delay:160ms">
+              <p>“Data matters because people matter.”</p>
+            </blockquote>
+
+            <div class="toolkit" data-reveal="fade" style="--delay:200ms">
+              <div class="toolkit__group">
+                <h3 class="meta-label">Methods</h3>
+                <p>Network and bibliometric analysis · NLP · regression · simulation · null models · sensitivity analysis · longitudinal design</p>
+              </div>
+              <div class="toolkit__group">
+                <h3 class="meta-label">Tools</h3>
+                <p>Python · R · NetworkX · igraph · PyTorch · PostgreSQL · Neo4j · React · FastAPI · Git · Docker · LaTeX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <div class="section__head" data-reveal="head">
+          <span class="section__index">II</span>
+          <h2 class="section__title" id="research-title">Research</h2>
+          <p class="section__note">Four lines of work, one question</p>
+        </div>
+
+        <p class="research__intro" data-reveal="fade">My research is organized around four lines: computational social science, network analysis, computational communication, and social and information networks. Across them, I ask how fields are organized, how platforms shape public life, and how measurement changes what we can claim — questions that began with recommender systems and still shape how I think about structure and attention.</p>
+
+        <div class="research__list">
+          <button class="research__item" type="button" data-topic="css" data-cursor-label="Filter">
+            <span class="research__term">Computational Social Science</span>
+            <span class="research__desc">Digital traces, measurement, and reproducible workflows across the social sciences.</span>
+            <span class="research__count">4 papers</span>
+          </button>
+          <button class="research__item" type="button" data-topic="networks" data-cursor-label="Filter">
+            <span class="research__term">Network Analysis</span>
+            <span class="research__desc">Community structure, core–periphery, citation lineages, temporal snapshots, and null models.</span>
+            <span class="research__count">5 papers</span>
+          </button>
+          <button class="research__item" type="button" data-topic="communication" data-cursor-label="Filter">
+            <span class="research__term">Computational Communication</span>
+            <span class="research__desc">How search and platforms shape public discourse and scientific recognition.</span>
+            <span class="research__count">1 paper</span>
+          </button>
+          <button class="research__item" type="button" data-topic="info-networks" data-cursor-label="Filter">
+            <span class="research__term">Social and Information Networks</span>
+            <span class="research__desc">Information diffusion, knowledge organization, and recommendation.</span>
+            <span class="research__count">3 papers</span>
+          </button>
+        </div>
+        <p class="research__hint">Select a topic to filter the publication list below.</p>
+      </div>
+    </section>
+
+    <section class="section publications" id="publications" aria-labelledby="publications-title">
+      <div class="wrap">
+        <div class="section__head" data-reveal="head">
+          <span class="section__index">III</span>
+          <h2 class="section__title" id="publications-title">Publications</h2>
+          <p class="section__note">Peer-reviewed, in review, and preprints</p>
+        </div>
+
+        <div class="pub__filters" role="group" aria-label="Filter publications">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All <sup>5</sup></button>
+          <button class="filter" type="button" data-filter="peer" aria-pressed="false">Peer-reviewed <sup>2</sup></button>
+          <button class="filter" type="button" data-filter="review" aria-pressed="false">Under review <sup>2</sup></button>
+          <button class="filter" type="button" data-filter="preprint" aria-pressed="false">Preprint <sup>1</sup></button>
+          <button class="filter filter--topic" type="button" hidden></button>
+        </div>
+        <p class="pub__count" aria-live="polite">Showing 5 publications</p>
+
+        <div class="pub__groups">
+          <section class="pub-group" data-group="peer">
+            <h3 class="pub-group__title"><span>Peer-reviewed</span></h3>
+            <ul class="pub-list">
+              <li class="pub" data-status="peer" data-topics="css networks info-networks" data-reveal="row">
+                <div class="pub__meta">
+                  <span class="pub__year">2026</span>
+                  <span class="pub__badge">Journal article</span>
+                </div>
+                <div class="pub__body">
+                  <p class="pub__authors">Cui, P.</p>
+                  <h4 class="pub__title"><a href="https://doi.org/10.1007/s13278-026-01617-0" target="_blank" rel="noopener noreferrer" data-cursor-label="Read">Mapping the intellectual landscape of digital social networks: a bibliometric and citation network analysis<span class="sr-only"> (opens in a new tab)</span></a></h4>
+                  <p class="pub__venue"><em>Social Network Analysis and Mining</em>, 16, Article 77.</p>
+                  <p class="pub__summary">A bibliometric and citation-network map of 1,859 Web of Science records, tracing the field’s core–periphery structure and its turn toward algorithmically mediated communication and misinformation.</p>
+                  <p class="pub__topics"><span>Computational Social Science</span><span>Network Analysis</span><span>Social and Information Networks</span></p>
+                </div>
+                <a class="pub__doi" href="https://doi.org/10.1007/s13278-026-01617-0" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for Mapping the intellectual landscape of digital social networks in a new tab">DOI</a>
+              </li>
+
+              <li class="pub" data-status="peer" data-topics="networks info-networks" data-reveal="row">
+                <div class="pub__meta">
+                  <span class="pub__year">2023</span>
+                  <span class="pub__badge">Journal article</span>
+                </div>
+                <div class="pub__body">
+                  <p class="pub__authors">Cui, P., Yin, B., &amp; Xu, B.</p>
+                  <h4 class="pub__title"><a href="https://doi.org/10.1038/s41598-023-43511-1" target="_blank" rel="noopener noreferrer" data-cursor-label="Read">The application of social recommendation algorithm integrating attention model in movie recommendation<span class="sr-only"> (opens in a new tab)</span></a></h4>
+                  <p class="pub__venue"><em>Scientific Reports</em>, 13, Article 16938.</p>
+                  <p class="pub__summary">A first-author study combining recurrent preference modeling with social-relation attention, evaluated on CiaoDVDs and Douban using hit rate and NDCG.</p>
+                  <p class="pub__topics"><span>Network Analysis</span><span>Social and Information Networks</span><span>Recommender Systems</span></p>
+                </div>
+                <a class="pub__doi" href="https://doi.org/10.1038/s41598-023-43511-1" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for The application of social recommendation algorithm integrating attention model in movie recommendation in a new tab">DOI</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="pub-group" data-group="review">
+            <h3 class="pub-group__title"><span>Under review</span></h3>
+            <ul class="pub-list">
+              <li class="pub" data-status="review" data-topics="css networks communication" data-reveal="row">
+                <div class="pub__meta">
+                  <span class="pub__year">2026</span>
+                  <span class="pub__badge">Manuscript</span>
+                </div>
+                <div class="pub__body">
+                  <p class="pub__authors">Cui, P.</p>
+                  <h4 class="pub__title">Network Analysis in Communication Research: Research Topics, Knowledge Organization, and Research Practices</h4>
+                  <p class="pub__venue">Under review · Preprint: arXiv:2609.30905</p>
+                  <p class="pub__summary">A review and bibliometric account of how network analysis is used in communication research — its topics, knowledge organization, and research practices.</p>
+                  <p class="pub__topics"><span>Computational Social Science</span><span>Network Analysis</span><span>Computational Communication</span></p>
+                </div>
+                <a class="pub__doi" href="https://arxiv.org/abs/2609.30905" target="_blank" rel="noopener noreferrer" aria-label="Open arXiv preprint 2609.30905 in a new tab">arXiv</a>
+              </li>
+
+              <li class="pub" data-status="review" data-topics="css networks" data-reveal="row">
+                <div class="pub__meta">
+                  <span class="pub__year">2026</span>
+                  <span class="pub__badge">Manuscript</span>
+                </div>
+                <div class="pub__body">
+                  <p class="pub__authors">Cui, P.</p>
+                  <h4 class="pub__title">Auditing Measurement Changes in Citation Analysis: An Observation-Contract Workflow and an arXiv–Semantic Scholar Case</h4>
+                  <p class="pub__venue">Under review.</p>
+                  <p class="pub__summary">An observation-contract workflow for linking claims to estimands, measurement choices, and derivation paths, tested on an arXiv–Semantic Scholar case.</p>
+                  <p class="pub__topics"><span>Computational Social Science</span><span>Network Analysis</span></p>
+                </div>
+                <span class="pub__doi pub__doi--muted" aria-hidden="true">In review</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="pub-group" data-group="preprint">
+            <h3 class="pub-group__title"><span>Preprint</span></h3>
+            <ul class="pub-list">
+              <li class="pub" data-status="preprint" data-topics="css networks info-networks" data-reveal="row">
+                <div class="pub__meta">
+                  <span class="pub__year">2025</span>
+                  <span class="pub__badge">Preprint</span>
+                </div>
+                <div class="pub__body">
+                  <p class="pub__authors">Cui, P., &amp; Dong, Y.</p>
+                  <h4 class="pub__title"><a href="https://doi.org/10.48550/arXiv.2502.07412" target="_blank" rel="noopener noreferrer" data-cursor-label="Read">Mapping the Intellectual Structure of Social Network Research: A Comparative Bibliometric Analysis<span class="sr-only"> (opens in a new tab)</span></a></h4>
+                  <p class="pub__venue">arXiv preprint.</p>
+                  <p class="pub__summary">A comparative bibliometric analysis of the intellectual structure of social network research.</p>
+                  <p class="pub__topics"><span>Computational Social Science</span><span>Network Analysis</span><span>Social and Information Networks</span></p>
+                </div>
+                <a class="pub__doi" href="https://doi.org/10.48550/arXiv.2502.07412" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for Mapping the Intellectual Structure of Social Network Research in a new tab">DOI</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <p class="pub__empty" hidden>No publications match this filter.</p>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section__head" data-reveal="head">
+          <span class="section__index">IV</span>
+          <h2 class="section__title" id="experience-title">Experience</h2>
+          <p class="section__note">Selected research and research administration</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal="row">
+            <p class="timeline__date">Apr–Sep 2026</p>
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <div class="timeline__body">
+              <h3 class="timeline__role">Research Assistant</h3>
+              <p class="timeline__org">City University of Hong Kong · Department of Media and Communication</p>
+              <p class="timeline__note">Intelligence Team · China Unicom–CityUHK Joint Laboratory for Intelligent Scam Prevention · Hong Kong</p>
+              <ul class="timeline__points">
+                <li>Built an AI-assisted React/FastAPI workbench for public-discourse research, integrating relevance screening, topic registration, comment analysis, and recoverable data workflows.</li>
+                <li>Processed posts and threaded comments across six PostgreSQL databases and contributed to an anti-fraud knowledge-graph pipeline in Neo4j.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal="row">
+            <p class="timeline__date">Mar–Jul 2025</p>
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <div class="timeline__body">
+              <h3 class="timeline__role">Research Assistant</h3>
+              <p class="timeline__org">The Chinese University of Hong Kong, Shenzhen · Computational Social Science</p>
+              <p class="timeline__note">Shenzhen</p>
+              <ul class="timeline__points">
+                <li>Contributed to manuscript revisions on network-based propagation, clarifying concepts and methods.</li>
+                <li>Assisted with bibliometric analysis, network modeling, and epidemic simulations.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal="row">
+            <p class="timeline__date">Oct 2023–Jan 2024</p>
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <div class="timeline__body">
+              <h3 class="timeline__role">Research Project Management Intern</h3>
+              <p class="timeline__org">Institute of Physics, Chinese Academy of Sciences</p>
+              <p class="timeline__note">Research administration office · Beijing</p>
+              <ul class="timeline__points">
+                <li>Reviewed 25 Western Light major projects and contributed to the 2035 research layout for State Key Laboratories.</li>
+                <li>Prepared reports on scientific-facility data, materials databases, and new electronic structures.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section education" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <div class="section__head" data-reveal="head">
+          <span class="section__index">V</span>
+          <h2 class="section__title" id="education-title">Education</h2>
+          <p class="section__note">Training across artificial intelligence and social science</p>
+        </div>
+
+        <div class="edu__grid">
+          <article class="edu" data-reveal="fade">
+            <p class="edu__date">2024–</p>
+            <h3 class="edu__school">University of California San Diego</h3>
+            <p class="edu__degree">M.S. studies, Computational Social Science</p>
+            <p class="edu__detail">School of Social Sciences · La Jolla, CA</p>
+            <p class="edu__course">Coursework: Statistical Computing and Inference from Data; Social Networks; Research in Computational Social Science; Computational Social Science Technical Bootcamp.</p>
+          </article>
+
+          <article class="edu" data-reveal="fade" style="--delay:80ms">
+            <p class="edu__date">2020–2024</p>
+            <h3 class="edu__school">Communication University of China</h3>
+            <p class="edu__degree">B.Eng., Artificial Intelligence</p>
+            <p class="edu__detail">School of Information and Communication Engineering · Beijing</p>
+            <p class="edu__course">Outstanding Graduate of Beijing Higher Education Institutions · Outstanding Graduate, CUC.</p>
+          </article>
+        </div>
+
+        <div class="honors" data-reveal="fade">
+          <h3 class="honors__title">Selected honors &amp; training</h3>
+          <ul class="honors__list">
+            <li><span class="honor__year">2024</span><span>Outstanding Graduate of Beijing Higher Education Institutions</span></li>
+            <li><span class="honor__year">2024</span><span>Outstanding Graduate, Communication University of China</span></li>
+            <li><span class="honor__year">2023</span><span>Zhongtian Broadcasting Outstanding Student Leader Scholarship, 2022–2023</span></li>
+            <li><span class="honor__year">2025</span><span>Elsevier Researcher Academy · Certified Peer Reviewer Course</span></li>
+            <li><span class="honor__year">2024</span><span>CITI Program · GCP for Social and Behavioral Research (valid through 2027)</span></li>
           </ul>
         </div>
       </div>
-    </nav>
-  </div>
-</header>
+    </section>
 
-
-
-	
-	
-<section class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
-  <div class="container">
-    <div class="row flex-column-reverse flex-md-row rad-fade-down rad-waiting rad-animate">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-        <h1 class="display-1">
-          Greetings, I&#39;m Amethystium | Pengjia Cui
-          <br />
-          <span
-            >U&#43;321E1</span
-          >
-        </h1>
-        <p class="lead">
-          I'm currently pursuing as M.S. in <a target='_blank' href='https://css.ucsd.edu/'>Computational Social Science</a> at <a target='_blank' href='https://socialsciences.ucsd.edu/'>School of Social Sciences, UC San Diego</a>. <br>My research interests focus on network science, social computing, recommender system. <br>I'm actively seeking PhD opportunities in Network Science and Social Network Analysis.
-
-        </p>
-        <a
-          href="https://pcui@ucsd.edu"
-          class="btn btn-primary"
-        >
-          <i class="icon-mail-fill"></i>
-          Contact
-        </a>
-      </div>
-<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 profile-image">
-
-  
-  
-  
-  
-
-
-  <picture>
-    <source srcset="/images/showcase/showcase_hu2121535790676248767.webp 1x, /images/showcase/showcase@2x_hu16993012711266682273.webp 2x" type="image/webp" />
-    <source srcset="/images/showcase/showcase.png 1x, /images/showcase/showcase@2x.png 2x" type="image/webp">
-    <img
-      width="750"
-      height="729"
-      class="lozad img-responsive"
-      src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-      srcset="/images/showcase/showcase.png 1x, /images/showcase/showcase@2x.png 2x"
-      data-src="/images/showcase/showcase.png"
-      data-srcset="/images/showcase/showcase.png 1x, /images/showcase/showcase@2x.png 2x"
-      alt=""
-    />
-  </picture>
-
-</div>
-    </div>
-    <div class="row platform-links">
-      <div class="col-12">
-        
-        <a href="https://www.linkedin.com/in/pengjia-cui-7b4108322/" target="_blank" rel="noopener noreferrer" aria-label="linkedin"
-          ><i class="icon-linkedin-line"></i
-        ></a>
-        
-        <a href="https://github.com/Amethystium-321E1" target="_blank" rel="noopener noreferrer" aria-label="github"
-          ><i class="icon-github-line"></i
-        ></a>
-        
-      </div>
-    </div>
-  </div>
-  
-</section>
-
-
-	
-	
-<section class="section rad-animation-group pb-0" id="about">
-  <div class="container rad-fade-down">
-    <div class="row d-flex flex-column-reverse flex-md-row">
-      <div class="about__profile-picture col-12 col-md-6">
-        
-              
-        
-        
-        <picture>
-          <source srcset="/images/who-am-i/user-picture_hu10028497620215350866.webp 1x, /images/who-am-i/user-picture_hu10028497620215350866.webp 2x" type="image/webp" />
-          <source srcset="/images/who-am-i/user-picture.png 1x, /images/who-am-i/user-picture@2x.png 2x" type="image/webp">
-          <img
-            width="950"
-            height="950"
-            class="lozad img-responsive image-left-overflow"
-            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-            srcset="/images/who-am-i/user-picture.png 1x, /images/who-am-i/user-picture@2x.png 2x"
-            data-src="/images/who-am-i/user-picture.png"
-            data-srcset="/images/who-am-i/user-picture.png 1x, /images/who-am-i/user-picture@2x.png 2x"
-            alt="Profile Picture of Adrián Moreno (@zetxek), working side by side with a colleague: sitting on a desk, while looking at a screen"
-          />
-        </picture>
-      </div>
-      <div class="col-12 col-md-6 my-auto my-auto">
-        <h2>Who am I?</h2>
-        <p class="lead">
-  I am a driven innovator and skilled researcher, deeply rooted in Artificial Intelligence and now advancing into Computational Social Science with a unique expertise that bridges technical precision and strategic insight. 
-</p> <p class="lead">
-  My work spans cutting-edge fields like network science, social computing and recommender systems, where I confidently tackle and solve complex, interdisciplinary challenges. 
-</p> <p class="lead">
-  From high-impact research collaborations to real-world applications of advanced algorithms, I consistently deliver transformative results. 
-</p> <p class="lead">
-  My vision and drive enable me to convert sophisticated technical insights into powerful, actionable outcomes that shape and redefine industries.
-</p>
-
-        <a
-          href="http://localhost:1313/"
-          target="_blank"
-          class="btn btn-primary"
-        >
-          <i class="icon-smile-fill"></i>
-          About Me
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-	
-	
-<section class="section section--border-bottom rad-animation-group">
-    <div class="container">
-        <div class="row rad-fade-down">
-            <div class="col-12">
-                <h2>Education</h2>
-                <div class="row pt-2 pt-md-4">
-                    
-                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
-                        <div class="education">
-                            <div class="education__date">2024-2025</div>
-                            <div class="education__title">University of California San Diego</div>
-                            <div class="education__degree">
-                                Master of Science, Computational Social Science
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
-                        <div class="education">
-                            <div class="education__date">2020-2024</div>
-                            <div class="education__title">Communication University of China</div>
-                            <div class="education__degree">
-                                Bachelor of Engineering, Artificial Intelligence
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="section__head" data-reveal="head">
+          <span class="section__index">VI</span>
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p class="section__note">Email is the best way to reach me</p>
         </div>
-    </div>
-</section>
 
+        <div class="contact__grid">
+          <div class="contact__copy" data-reveal="fade">
+            <p class="contact__lede">I am open to PhD opportunities in network science, computational communication, and adjacent fields — and to collaborations on networks, measurement, and public discourse.</p>
+            <p>A full CV is available on request.</p>
+          </div>
 
-	
-	
-<section id="experience" class="section-experience section section--border-bottom rad-animation-group">
-    <div class="container">
-        <div class="row flex-column-reverse flex-md-row rad-fade-down">
-            <div class="col-12 cold-md-12 col-sm-6 mt-5 mt-sm-0">
-                
-                
-                
-                
-                
-                
-                
-                
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="container-experience">
-  <div class="row">
-    <h2>Experience</h2>
-    <p class="lead">My work frequently demands a broad range of expertise, from managing scientific projects in condensed matter physics to applying Fruchterman-Reingold visualizations for network analysis.
-</p>
-  </div>
-  <div class="row">
-    <div class="col-12 col-lg-4">
-      <a
-        href="https://www.linkedin.com/in/pengjia-cui-7b4108322/"
-        class="btn btn-primary btn-block"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="icon-linkedin-fill"></i>
-        Linkedin
-        <i class="icon-arrow-right"></i
-      ></a>
-    </div>
-    <div class="col-12 col-lg-4">
-      <a
-        href="http://localhost:1313/docs/CV.pdf"
-        class="btn btn-frameless"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="icon-profile-fill"></i>
-        Download My Resume
-      </a>
-    </div>
-    
-    <div class="col-12 col-lg-4">
-      <a
-        href="http://localhost:1313/experience"
-        class="btn btn-frameless"
-        rel="noopener noreferrer"
-      >
-        <i class="icon-arrow-right"></i>
-        View All
-      </a>
-    </div>
-    
-  </div>
-</div>
-
-            </div>
+          <div class="contact__email" data-reveal="fade" style="--delay:80ms">
+            <a class="email-link" href="mailto:pcui@ucsd.edu" data-cursor-label="Email">pcui@ucsd.edu</a>
+            <button class="copy-button" type="button" data-copy="pcui@ucsd.edu" data-cursor-label="Copy">Copy address</button>
+            <span class="copy-feedback" aria-live="polite"></span>
+          </div>
         </div>
-    </div>
-</section>
 
-	
-	
+        <ul class="contact__links" data-reveal="fade" style="--delay:140ms">
+          <li>
+            <span class="contact__label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/pengjia-cui-7b4108322/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">pengjia-cui</a>
+            <svg class="external" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+          <li>
+            <span class="contact__label">GitHub</span>
+            <a href="https://github.com/Amethystium-321E1" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">Amethystium-321E1</a>
+            <svg class="external" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+          <li>
+            <span class="contact__label">ORCID</span>
+            <a href="https://orcid.org/0009-0004-6360-8897" target="_blank" rel="noopener noreferrer" aria-label="ORCID record (opens in a new tab)">0009-0004-6360-8897</a>
+            <svg class="external" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-
-
-
-<section id="portfolio" class="section section--border-bottom">
-  <div class="container client-works-container">
-    <h2 class="rad-animation-group rad-fade-down">
-      Clients &amp; Works
-    </h2>
-    <div class="row row--padded rad-animation-group rad-fade-down">
-      <div class="col-12">
-        <div class="clients">
-                    
-          
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__seal" aria-hidden="true">
+          <img src="/assets/img/logo-print.webp" width="775" height="900" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="footer__identity">
+          <p class="footer__wordmark">Amethystium</p>
+          <p class="footer__name">Hari Tswei <span>(Pengjia Cui)</span> <span class="cjk" lang="zh-Hans">崔鹏嘉</span></p>
+          <p class="footer__line">Computational social science · networks · communication · knowledge · measurement</p>
+        </div>
+        <div class="footer__meta">
+          <p>U+321E1</p>
+          <p>Last updated October 2026</p>
+          <p>Set in Bodoni Moda &amp; Newsreader</p>
         </div>
       </div>
-    </div>
-    
-              
-    
-  </div>
-</section>
-
-
-	
-	
-<section class="section rad-animation-group section--border-bottom">
-    <div class="container">
-        <h2 class="rad-fade-down">Testimonials</h2>
-        <div class="row row--padded mb-0 rad-fade-down">
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                </p>
-                <div class="testimonial__author">
-                         
-                         
-                         
-                         
-                       
-                       
-                         <picture>
-                           <source srcset="/images/testimonials/daniel-jordan_hu11009894959731666840.webp 1x, /images/testimonials/daniel-jordan@2x_hu7813673516879846642.webp 2x" type="image/webp" />
-                           <source srcset="/images/testimonials/daniel-jordan.jpg 1x, /images/testimonials/daniel-jordan@2x.jpg 2x" type="image/webp">
-                           <img
-                             width="52"
-                             height="52"
-                             class="lozad img-responsive"
-                             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                             srcset="/images/testimonials/daniel-jordan.jpg 1x, /images/testimonials/daniel-jordan@2x.jpg 2x"
-                             data-src="/images/testimonials/daniel-jordan.jpg"
-                             data-srcset="/images/testimonials/daniel-jordan.jpg 1x, /images/testimonials/daniel-jordan@2x.jpg 2x"
-                             alt="Alpha"
-                           />
-                         </picture>
-                    
-                         <div class="testimonial__author-info">
-                        <h3>Alpha</h3>
-                        <span>Delta, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-                <div class="testimonial__author">
-                         
-                         
-                         
-                         
-                       
-                       
-                         <picture>
-                           <source srcset="/images/testimonials/jonathan-peters_hu9661064999477647103.webp 1x, /images/testimonials/jonathan-peters@2x_hu16836070213931677264.webp 2x" type="image/webp" />
-                           <source srcset="/images/testimonials/jonathan-peters.jpg 1x, /images/testimonials/jonathan-peters@2x.jpg 2x" type="image/webp">
-                           <img
-                             width="52"
-                             height="52"
-                             class="lozad img-responsive"
-                             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                             srcset="/images/testimonials/jonathan-peters.jpg 1x, /images/testimonials/jonathan-peters@2x.jpg 2x"
-                             data-src="/images/testimonials/jonathan-peters.jpg"
-                             data-srcset="/images/testimonials/jonathan-peters.jpg 1x, /images/testimonials/jonathan-peters@2x.jpg 2x"
-                             alt="Beta"
-                           />
-                         </picture>
-                    
-                         <div class="testimonial__author-info">
-                        <h3>Beta</h3>
-                        <span>Echo, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
-                <i class="icon-quote"></i>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                </p>
-                <div class="testimonial__author">
-                         
-                         
-                         
-                         
-                       
-                       
-                         <picture>
-                           <source srcset="/images/testimonials/antonio-willis_hu285661273275573299.webp 1x, /images/testimonials/antonio-willis@2x_hu9792004273425314479.webp 2x" type="image/webp" />
-                           <source srcset="/images/testimonials/antonio-willis.jpg 1x, /images/testimonials/antonio-willis@2x.jpg 2x" type="image/webp">
-                           <img
-                             width="52"
-                             height="52"
-                             class="lozad img-responsive"
-                             src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-                             srcset="/images/testimonials/antonio-willis.jpg 1x, /images/testimonials/antonio-willis@2x.jpg 2x"
-                             data-src="/images/testimonials/antonio-willis.jpg"
-                             data-srcset="/images/testimonials/antonio-willis.jpg 1x, /images/testimonials/antonio-willis@2x.jpg 2x"
-                             alt="Charlie"
-                           />
-                         </picture>
-                    
-                         <div class="testimonial__author-info">
-                        <h3>Charlie</h3>
-                        <span>Foxtrot, CEO</span>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-
-	
-	
-<section id="contact" class="section section--contact pt-0">
-    <div class="container">
-        <div class="contact">
-            <h2>Contact</h2>
-            <div class="row pt-2">
-                <div class="col-12 col-lg-7">
-                    <form action="#" method="">
-                        <div class="row">
-                            <div class="col-12 col-sm-6">
-                                <input type="text" name="full_name" id="full_name"
-                                       placeholder="Full Name"/>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" name="email" id="email"
-                                       placeholder="Email Address"/>
-                            </div>
-                        </div>
-                        <div class="row pt-4">
-                            <div class="col-12">
-                                <textarea name="message" id="message"
-                                          cols="30" rows="3" placeholder="Type Your Message Here"></textarea>
-                            </div>
-                        </div>
-                        <div class="row pt-4">
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="icon-mail-fill"></i>
-                                    Send Message
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-12 col-lg-5 contact__info">
-                    <h3>Phone Number</h3>
-                    <span>&#43;1 (858) 214 7963</span>
-                    <h3>Email</h3>
-                    <span><a href="mailto:pcui@ucsd.edu">pcui@ucsd.edu</a></span>
-                    <h3>Address</h3>
-                    <span>#3117, 3869 Miramar Street, La Jolla<br />CA 92037, San Diego</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-	
-	
-<section class="section section--cta">
-<div class="container">
-  <div class="row">
-    <div class="col-12 text-center">
-      <h2>Newsletter subscription</h2>
-      <div class="rad-subscription-group">
-        <form id="rad-subscription" action="">
-          <input
-            id="rad-subscription-email"
-            type="email"
-            class="form-control"
-            aria-describedby="emailHelp"
-            placeholder="Email Address..."
-            aria-label="Email Address"
-          />
-          <button type="submit" id="rad-subscription-submit" class="btn btn-light btn-rounded">
-            Sign Up
-          </button>
-        </form>
-        <div id="rad-subscription-success" class="d-none">
-          <p class="lead">Successfully subscribed</p>
-        </div>
-        <div id="rad-subscription-fail" class="d-none">
-          <p>Error while subscribing.</p>
-        </div>
-        <script src='http://localhost:1313/js/subscription.js'></script>
-      </div>
-      <small id="emailHelp" class="form-text text-muted"
-        >We&#39;ll never share your email with anyone else.</small
-      >
-    </div>
-  </div>
-</div>
-</section>
-
-
-	
-
-	<footer class="footer">
-  <div class="container">
-    <div class="footer__left">
-      <div class="footer__copy">
-        © Adritian. Free Hugo theme by Adrián Moreno Peña.
+      <div class="footer__bottom">
+        <p>© 2026 Hari Tswei. All rights reserved.</p>
+        <a class="footer__top-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
       </div>
     </div>
-    <div class="footer__links">
-      <ul class="navbar-nav ">
-        <li class="nav-item">
-            <a class="nav-link" href="http://localhost:1313/">🏠 HOME</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/#about">ABOUT</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/#portfolio">PORTFOLIO</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/#contact">CONTACT</a>
-        </li>
-        
-      </ul>
-    </div>
-    <div class="footer__right">
-      
-    </div>
-  </div>
-</footer>
+  </footer>
 
-    <script>
-  window.addEventListener("load", function() {
-    try{
-      var observer = window.lozad(".lozad", {
-        rootMargin: window.innerHeight / 2 + "px 0px",
-        threshold: 0.01
-      }); 
-      observer.observe();
-    } catch(e) {
-      console.error(e);
-    }
-  });
-</script>
-<script defer src='http://localhost:1313/js/rad-animations.js'></script>
-<script defer src='http://localhost:1313/js/library/smooth-scroll.polyfills.min.js'></script>
-<script defer src='http://localhost:1313/js/sticky-header.js'></script>
-<script defer src='http://localhost:1313/js/smooth-scroll-init.js'></script>
-<script defer src='http://localhost:1313/js/library/bootstrap.min.js'></script>
-
-
-
-
-
-<script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-</script>
-
-
-
+  <script src="/assets/js/site.js" defer></script>
 </body>
-
 </html>

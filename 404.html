@@ -1,214 +1,102 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
-    <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-<meta name="theme-color" content="#478079" >
-
-
-
-<title>Amethystium | Pengjia Cui</title>
-<meta name="description" content="This is the personal website of Pengjia Cui based on Hugo. ">
-
-
-<style data-generator="critical-css">
-
-</style>
-
-
-
-    
-        
-        
-    
-
-    
-        
-        
-    
-
-    
-        
-        
-    
-
-
-
-
-
- 
-
-
-<link
-  rel="preload"
-  href="/css/bundle.css"
-  as="style"
-  data-generator="purgeCSS"
-  onload="this.onload=null;this.rel='stylesheet'"
-  
-/>
-<noscript>
-  <link 
-    rel="stylesheet" 
-    href="/css/bundle.css"
-    
-  />
-</noscript>
-
-
-
-<script src='http://localhost:1313/js/library/lozad.min.js'></script>
-
-
-
-    
-
-
+<!doctype html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Amethystium</title>
+  <meta name="description" content="This page is not part of the Amethystium index.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0713">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/bodoni-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/newsreader-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('amethystium-theme-v2');
+        const theme = stored === 'day' ? 'day' : 'night';
+        document.documentElement.dataset.theme = theme;
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', theme === 'night' ? '#0b0713' : '#f0eee7');
+      } catch (_) {
+        document.documentElement.dataset.theme = 'night';
+      }
+    })();
+  </script>
 </head>
+<body class="error-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor__ring"></span>
+    <span class="cursor__core"></span>
+    <span class="cursor__label"></span>
+  </div>
 
-<body>
+  <header class="site-header" id="top">
+    <div class="wrap header__inner">
+      <a class="brand" href="/" aria-label="Amethystium — home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <ellipse cx="16" cy="17" rx="13" ry="6" transform="rotate(-20 16 17)" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/>
+          <path d="M16 4 L23 12 L20 26 L12 26 L9 12 Z" fill="var(--accent)" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M16 4 L16 26 M9 12 L23 12 M12 26 L19 12 L20 26" fill="none" stroke="currentColor" stroke-width=".75" opacity=".8"/>
+        </svg>
+        <span class="brand__name">Amethystium</span>
+        <span class="brand__code">U+321E1</span>
+      </a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to day mode">
+        <svg class="icon icon--sun" viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="3.4" fill="none" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M10 1.6v2.1M10 16.3v2.1M1.6 10h2.1M16.3 10h2.1M3.9 3.9l1.5 1.5M14.6 14.6l1.5 1.5M16.1 3.9l-1.5 1.5M5.4 14.6l-1.5 1.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon icon--moon" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M15.9 12.4A6.4 6.4 0 0 1 7.6 4.1 6.4 6.4 0 1 0 15.9 12.4Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M15.3 3.2l.4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4.4-1.2Z" fill="currentColor" opacity=".8"/>
+        </svg>
+        <span class="theme-toggle__text">Day</span>
+      </button>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
 
-    
-
-<header class="header fixed-top rad-animation-group" id="header">
-  <div class="container rad-fade-in">
-    <nav class="navbar navbar-expand-lg navbar-light p-0">
-      <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="http://localhost:1313/">
-          <span>PENGJIA</span>
-          <span>CUI</span>
-        </a>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent, #header"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-lg-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="http://localhost:1313/">HOME</a>
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#about"
-                >ABOUT</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#portfolio"
-                >PORTFOLIO</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/blog"
-                >BLOG</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#contact"
-                >CONTACT</a
-              >
-            </li>
-            
-          </ul>
+  <main class="error-main" id="main">
+    <div class="wrap">
+      <div class="error-content" data-reveal="fade">
+        <p class="error-kicker">Error 404 · Index miss</p>
+        <h1 class="error-title">This node is not<br>in the network.</h1>
+        <p class="error-copy">The address you followed is not part of this index. Return to the frontispiece, or use one of the routes below.</p>
+        <div class="error-actions">
+          <a class="link-cta" href="/" data-cursor-label="Return">
+            <span>Back to Amethystium</span>
+            <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="link-cta" href="mailto:pcui@ucsd.edu" data-cursor-label="Email">
+            <span>Write to me</span>
+            <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-      </div>
-    </nav>
-  </div>
-</header>
-
-
-<section id="breadcrumb-bar" class="breadcrumb-bar container">
-        <ul class="breadcrumbs">
-            <li class="breadcrum-item"><span><a href="/">Home</a></span></li><li class="breadcrum-item"><span><a href="/404.html">404.html</a></span></li></ul>
-</section>
-
-
-    <section class="section four-o-four">
-      <div class="container text-center">
-        <h1 class="display-1">404</h1>
-        <h4>Page not found</h4>
-        <p>
-          Sorry, but the page you were looking for could not be found.
-        </p>
-        <a href="http://localhost:1313/" class="btn btn-primary">Back to homepage</a>
-      </div>
-    </section>
-
-    <footer class="footer">
-  <div class="container">
-    <div class="footer__left">
-      <div class="footer__copy">
-        © Adritian. Free Hugo theme by Adrián Moreno Peña.
+        <nav class="error-links" aria-label="Site sections">
+          <a href="/#research">Research</a>
+          <a href="/#publications">Publications</a>
+          <a href="/#experience">Experience</a>
+          <a href="/#education">Education</a>
+          <a href="/#contact">Contact</a>
+        </nav>
       </div>
     </div>
-    <div class="footer__links">
-      <ul class="navbar-nav ">
-        <li class="nav-item">
-            <a class="nav-link" href="http://localhost:1313/">🏠 HOME</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/#about">ABOUT</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/#portfolio">PORTFOLIO</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/#contact">CONTACT</a>
-        </li>
-        
-      </ul>
+  </main>
+
+  <footer class="site-footer error-footer">
+    <div class="wrap">
+      <div class="footer__bottom">
+        <p>© 2026 Hari Tswei. All rights reserved.</p>
+        <a class="footer__top-link" href="/">Amethystium <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
-    <div class="footer__right">
-      
-    </div>
-  </div>
-</footer>
- 
-    <script>
-  window.addEventListener("load", function() {
-    try{
-      var observer = window.lozad(".lozad", {
-        rootMargin: window.innerHeight / 2 + "px 0px",
-        threshold: 0.01
-      }); 
-      observer.observe();
-    } catch(e) {
-      console.error(e);
-    }
-  });
-</script>
-<script defer src='http://localhost:1313/js/rad-animations.js'></script>
-<script defer src='http://localhost:1313/js/library/smooth-scroll.polyfills.min.js'></script>
-<script defer src='http://localhost:1313/js/sticky-header.js'></script>
-<script defer src='http://localhost:1313/js/smooth-scroll-init.js'></script>
-<script defer src='http://localhost:1313/js/library/bootstrap.min.js'></script>
+  </footer>
 
-
-
-
-
-<script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-</script>
-
-
-
-  </body>
+  <script src="/assets/js/site.js" defer></script>
+</body>
 </html>
